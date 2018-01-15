@@ -1,0 +1,41 @@
+package: jvole.com/algo-go
+import:
+- package: github.com/emirpasic/gods
+  version: v1.9.0
+  subpackages:
+  - containers
+  - lists
+  - lists/arraylist
+  - lists/doublylinkedlist
+  - lists/singlylinkedlist
+  - maps
+  - maps/hashbidimap
+  - maps/hashmap
+  - maps/treebidimap
+  - maps/treemap
+  - sets
+  - sets/hashset
+  - sets/treeset
+  - stacks
+  - stacks/arraystack
+  - stacks/linkedliststack
+  - trees
+  - trees/avltree
+  - trees/binaryheap
+  - trees/btree
+  - trees/redblacktree
+  - utils
+- package: github.com/fghosth/jvole
+  subpackages:
+  - hashing
+- package: github.com/RoaringBitmap/roaring
+  version: master
+- package: github.com/boltdb/bolt
+  version: master
+testImport:
+- package: github.com/d4l3k/messagediff
+  version: v1.1.0
+- package: github.com/davecgh/go-spew
+  version: v1.1.0
+  subpackages:
+  - spew

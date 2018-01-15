@@ -1,0 +1,43 @@
+hash: 0511b702175873d9e514a02c3cd5bf10d0262b844c5576e21f420d98acd1b1c0
+updated: 2018-01-15T10:07:26.382674+08:00
+imports:
+- name: github.com/boltdb/bolt
+  version: 9da31745363232bc1e27dbab3569e77383a51585
+- name: github.com/emirpasic/gods
+  version: f6c17b524822278a87e3b3bd809fec33b51f5b46
+  subpackages:
+  - containers
+  - lists
+  - lists/arraylist
+  - lists/doublylinkedlist
+  - lists/singlylinkedlist
+  - maps
+  - maps/hashbidimap
+  - maps/hashmap
+  - maps/treebidimap
+  - maps/treemap
+  - sets
+  - sets/hashset
+  - sets/treeset
+  - stacks
+  - stacks/arraystack
+  - stacks/linkedliststack
+  - trees
+  - trees/avltree
+  - trees/binaryheap
+  - trees/btree
+  - trees/redblacktree
+  - utils
+- name: github.com/fghosth/jvole
+  version: 46fbcbd1b2b2ba7fd28ca615871cda44e4c1a0d0
+  subpackages:
+  - hashing
+- name: github.com/RoaringBitmap/roaring
+  version: 0a6691af7cd3c226e37bcf45fa19f427b615edcd
+testImports:
+- name: github.com/d4l3k/messagediff
+  version: 7b706999d935b04cf2dbc71a5a5afcbd288aeb48
+- name: github.com/davecgh/go-spew
+  version: 346938d642f2ec3594ed81d874461961cd0faa76
+  subpackages:
+  - spew
