@@ -28,7 +28,7 @@ func read3(path string) []byte {
 func TestRoaringB(t *testing.T) {
 	rb := roaring.NewBitmap()
 	rb2 := roaring.NewBitmap()
-	// count := uint32(1000000000)
+	// count := uint32(4000000000)
 	// for i := uint32(0); i < count; i++ {
 	// 	rb.Add(i)
 	// 	rb2.Add(i + 2)
@@ -46,16 +46,21 @@ func TestRoaringB(t *testing.T) {
 	// if err3 != nil {
 	// 	fmt.Println(err3)
 	// }
-	t1 := time.Now() // get current time
+
 	buff := new(bytes.Buffer)
 	buff.Write(read3("./rb"))
 	rb.ReadFrom(buff)
+	// newrb := roaring.NewBitmap()
+	// newrb.ReadFrom(buff)
+	// if rb.Equals(newrb) {
+	// 	fmt.Println("I wrote the content to a byte stream and read it back.")
+	// }
 
 	buff2 := new(bytes.Buffer)
 	buff2.Write(read3("./rb2"))
 	rb2.ReadFrom(buff2)
-
-	roaring.ParOr(4, rb, rb2)
+	t1 := time.Now() // get current time
+	roaring.ParOr(8, rb, rb2)
 	// fmt.Println("rb1.And(rb2)", c.String())
 	elapsed := time.Since(t1)
 	fmt.Println("App elapsed: ", elapsed)
